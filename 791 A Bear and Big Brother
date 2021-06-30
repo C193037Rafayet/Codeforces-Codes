@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    int i;
+    long long sum=0;
+    char c = 'a';
+    for(i=0;i<s.size();i++)
+    {
+       int x = abs(s[i]-c);
+       int y = 26 - x;
+       sum+= min(x,y);
+       c = s[i];
+    }
+    cout<<sum<<endl;
+}
